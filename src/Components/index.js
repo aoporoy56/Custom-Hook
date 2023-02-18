@@ -6,7 +6,6 @@ export default function Index() {
 
     let [list, listHandle] = useState([]);
     let [load, loadHandle] = useState(true);
-    let [stateChange, stateChangeHandle] = useState(false);
     
     useEffect(()=>{
         setTimeout(() => {
@@ -26,7 +25,7 @@ export default function Index() {
 
             })
         }, 2000);
-    },[stateChange]);
+    },[]);
     cardList = list.map((singleData) =>
                 <Card className='' key={singleData.id}>
                     <Card.Body>
